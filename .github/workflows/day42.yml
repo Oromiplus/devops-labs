@@ -1,0 +1,37 @@
+name: Day 42 CI
+
+on:
+  push:
+
+jobs:
+
+  info:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show Date
+        run: date
+
+      - name: Show User
+        run: whoami
+
+      - name: Show Directory
+        run: pwd
+
+  system:
+    needs: info
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Memory
+        run: free -h
+
+      - name: Disk
+        run: df -h
+
+      - name: Uptime
+        run: uptime
