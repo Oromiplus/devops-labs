@@ -1,0 +1,17 @@
+# Python virtual environments
+.venv/
+.venvcd/
+venv/
+# Virtual environment accidentally created in the backend root
+/bin/
+/include/
+/lib/
+/lib64
+/pyvenv.cfg
+
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# Environment variables and secrets
+.env
